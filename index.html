@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Stock Ticker - Funny Stock Charts</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js library - Uses CDN but can also be downloaded locally -->
+    <!-- Download from: https://www.chartjs.org/docs/latest/getting-started/installation.html -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📈 Emoji Stock Ticker</h1>
+            <p class="tagline">Generate hilarious stock charts for random objects!</p>
+        </header>
+
+        <main>
+            <div class="control-panel">
+                <button id="generateBtn" class="btn btn-primary">
+                    🎲 Generate Random Chart
+                </button>
+                <button id="exportBtn" class="btn btn-secondary">
+                    💾 Export as PNG
+                </button>
+            </div>
+
+            <div class="chart-info">
+                <div class="stock-header">
+                    <h2 id="stockName">Loading...</h2>
+                    <span id="stockEmoji" class="emoji-display">📊</span>
+                </div>
+                <div class="stock-stats">
+                    <div class="stat">
+                        <span class="stat-label">Current Value:</span>
+                        <span id="currentValue" class="stat-value">$0.00</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Change:</span>
+                        <span id="changeValue" class="stat-value change-positive">+0.00%</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Market Cap:</span>
+                        <span id="marketCap" class="stat-value">$0M</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="stockChart"></canvas>
+            </div>
+
+            <div class="footer-info">
+                <p>💡 <strong>Tip:</strong> Export your favorite charts as PNG and sell them on Etsy or Gumroad!</p>
+                <p>📚 Check out <a href="MONETIZATION.md">MONETIZATION.md</a> for detailed tips on turning this into profit.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Created with ❤️ and 😂 | Powered by Chart.js</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
